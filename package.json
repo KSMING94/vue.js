@@ -1,5 +1,5 @@
 {
-  "name": "new-cli-project",
+  "name": "3-week-practice",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,14 +7,15 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "@babel/polyfill": "^7.0.0-rc.1",
+    "vue": "^2.5.17",
+    "vuetify": "^1.2.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
-    "vue-template-compiler": "^2.5.21"
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "vue-cli-plugin-vuetify": "^0.2.1",
+    "vue-template-compiler": "^2.5.17"
   },
   "postcss": {
     "plugins": {
@@ -24,6 +25,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
+    "not ie <= 10"
   ]
 }
