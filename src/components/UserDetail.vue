@@ -52,7 +52,7 @@ export default {
       return this.hadDog === true ? '있음' : '없음'
     }
   },
-  //lifecycle인 created hoops을 사용해 eventListener 선언
+  //lifecycle인 created hook을 사용해 eventListener 선언
   created() {
     eventBus.$on('userWasEdited', date => {
       this.editedDate = date
