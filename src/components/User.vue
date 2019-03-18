@@ -51,7 +51,7 @@ export default {
       this.address = user.address
       this.address = user.phone
       this.hadDog = user.hasDog
-      console.log('부모가 받았어')
+      
     }
   }
 }

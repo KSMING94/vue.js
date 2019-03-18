@@ -48,11 +48,11 @@
       },
       methods: {
         changeUser(){
-          
+
           //$emit를 사용하여 자식componenet를 부모component에 this.user를 보내준다
-          this.$emit('child', this.user)
-          //userWasEdited 가 eventBus로 전달된다
-          eventBus.$emit("userWasEdited", new Date())
+         
+         this.$emit('child', this.user)
+          eventBus.userWasEdited(new Date())
         }
       }
   }

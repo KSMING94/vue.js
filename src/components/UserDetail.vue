@@ -28,7 +28,7 @@
         </v-list-tile-content>
       </v-list-tile>
       <v-list-tile>
-        <v-list-tile-content>수정완료:</v-list-tile-content>
+        <v-list-tile-content>수정일자:</v-list-tile-content>
         <v-list-tile-content class="align-end">
           {{ editedDate }}
         </v-list-tile-content>
@@ -53,8 +53,8 @@ export default {
     }
   },
   //lifecycle인 created hoops을 사용해 eventListener 선언
-  create() {
-    eventBuS.$on('userWasEdited', (date) => {
+  created() {
+    eventBus.$on('userWasEdited', date => {
       this.editedDate = date
     })
   }
