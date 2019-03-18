@@ -27,17 +27,36 @@
           {{ hasDog }}
         </v-list-tile-content>
       </v-list-tile>
+      <v-list-tile>
+        <v-list-tile-content>수정완료:</v-list-tile-content>
+        <v-list-tile-content class="align-end">
+          {{ editedDate }}
+        </v-list-tile-content>
+      </v-list-tile>
     </v-list>
   </div>
 </template>
 
 <script>
+//UserDetail를 전달 받는 것
+import { eventBus } from "../main"
 export default {
+  data() {
+    return {
+      editedDate: null
+    }
+  },
   props : ['name', 'address', 'phone', 'hasDog'],
   computed: {
     hasDogKr() {
       return this.hadDog === true ? '있음' : '없음'
     }
+  },
+  //lifecycle인 created hoops을 사용해 eventListener 선언
+  create() {
+    eventBuS.$on('userWasEdited', (date) => {
+      this.editedDate = date
+    })
   }
 }
 </script>

@@ -14,7 +14,7 @@
         </UserDetail>
       </v-flex>
       <v-flex xs12 sm6>
-        <!-- 자식 component로 부터 신호 받기 -->
+        <!-- @child가 왔을 때 parent라고 신호 해줌 = 자식 component로 부터 신호 받기 -->
         <UserEdit
           :name="name"
           :address="address"

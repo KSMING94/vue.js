@@ -29,6 +29,8 @@
 </template>
 
 <script>
+  //main에서 불러내고 있기 때문에 eventBus 사용
+  import { eventBus } from "../main"
   export default{
     props: ['name', 'address', 'phone', 'hasDog'],
     data() {
@@ -46,9 +48,11 @@
       },
       methods: {
         changeUser(){
-          console.log(this.user)
-          //부모component에 this.user를 보내준다
+          
+          //$emit를 사용하여 자식componenet를 부모component에 this.user를 보내준다
           this.$emit('child', this.user)
+          //userWasEdited 가 eventBus로 전달된다
+          eventBus.$emit("userWasEdited", new Date())
         }
       }
   }
